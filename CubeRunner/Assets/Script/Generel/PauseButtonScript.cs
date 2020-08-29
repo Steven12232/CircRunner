@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class PauseButtonScript : MonoBehaviour
 {
     public GameObject PauseMenuCanvas;
+
+    public GameObject Rules;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,18 +17,35 @@ public class PauseButtonScript : MonoBehaviour
 
     public void ActivatePauseMenu()
     {
-        if (PauseMenuCanvas.activeSelf == true)
+        if(SceneManager.GetActiveScene().buildIndex == 1) //Checks if the scene is 1
         {
-            PauseMenuCanvas.SetActive(false);
+            if (PauseMenuCanvas.activeSelf == true && Rules.activeSelf == false)
+            {
+                PauseMenuCanvas.SetActive(false);
+            }
+            
+            else if(PauseMenuCanvas.activeSelf == false && Rules.activeSelf == false)
+            {
+                PauseMenuCanvas.SetActive(true);
+
+            }
+           
         }
-        else if(PauseMenuCanvas.activeSelf == false)
+        else if(SceneManager.GetActiveScene().buildIndex != 1) // Checks if the scene is not 1
         {
-            PauseMenuCanvas.SetActive(true);
+            if (PauseMenuCanvas.activeSelf == true)
+            {
+                PauseMenuCanvas.SetActive(false);
+            }
+            
+            else if(PauseMenuCanvas.activeSelf == false)
+            {
+                PauseMenuCanvas.SetActive(true);
 
-        }
-      
-
+            }
        
+        }
+        
     }
 
     // Update is called once per frame

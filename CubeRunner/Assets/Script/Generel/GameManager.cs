@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class GameManager : MonoBehaviour
 {
     public GameObject Player;
     public GameObject nextLevelAi;
     public Text LevelText;
     public AIScript aiScriptRef;
-    public Text RulesText;
+    public GameObject RulesText;
     public GameObject ContinueButton;
     public Lives _livesRef;
     public GameObject LoseCanvas;
@@ -52,9 +53,9 @@ public class GameManager : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex == 1) Player.SetActive(false);
 
         if (DidInvokeForRulesHappen == false)
-            RulesText.enabled = true;
+            RulesText.SetActive(true); 
         else
-            RulesText.enabled = false;
+            RulesText.SetActive(false);
 
         if (DidPlayerPressContinue == true)
         {
@@ -91,11 +92,12 @@ public class GameManager : MonoBehaviour
     
     private void DeactivateRulesWhenPlayerIsSpawned()
     {
-        if (Player.activeSelf) RulesText.enabled = false;
+        if (Player.activeSelf) RulesText.SetActive(false);
     }
 
     // Update is called once per frame
      void Update()
+     
     {
         LevelText.text = "Level:" + LevelNumber;
         DeactivateRulesWhenPlayerIsSpawned();

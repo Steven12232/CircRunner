@@ -102,7 +102,9 @@ public class GameManager : MonoBehaviour
         LevelText.text = "Level:" + LevelNumber;
         DeactivateRulesWhenPlayerIsSpawned();
         NumberOfAiLeft = GameObject.FindGameObjectsWithTag("AI");
-
+        
+        Debug.Log("YOYOYOYO");
+        
         if (!_livesRef.Heart3.activeSelf)
         {
            LoseCanvas.SetActive(true);

@@ -70,7 +70,7 @@ public class Bomb_Ai : MonoBehaviour
         
         if (_livesRef.Heart3.activeSelf == false) { return; }
 
-        CameraShaker.Instance.ShakeOnce(4f,4f,0.1f,2f);
+        CameraShaker.Instance.ShakeOnce(10f,4f,0.1f,2f);
 
 
     }

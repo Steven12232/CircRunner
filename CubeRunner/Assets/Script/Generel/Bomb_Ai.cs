@@ -57,6 +57,7 @@ public class Bomb_Ai : MonoBehaviour
         {
             _livesRef.Heart3.SetActive(false);
         }
+    }
         
         
     }

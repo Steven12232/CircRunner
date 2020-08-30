@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public GameObject nextLevelAi;
     public Text LevelText;
-    public AIScript aiScriptRef;
     public GameObject RulesText;
     public GameObject ContinueButton;
     public Lives _livesRef;
@@ -21,7 +20,6 @@ public class GameManager : MonoBehaviour
     private static bool DidPlayerPressContinue;
 
     private GameObject[] NumberOfAiLeft;
-    private GameObject[] OrigionalNumberOfAiLeft;
 
     private int LevelNumber;
 
@@ -62,7 +60,6 @@ public class GameManager : MonoBehaviour
             ContinueButton.SetActive(false);
             Player.SetActive(true);
         }
-        OrigionalNumberOfAiLeft = GameObject.FindGameObjectsWithTag("AI");
     }
 
     private void InvokeSetPlayerAfterDelay()

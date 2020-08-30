@@ -65,7 +65,6 @@ public class Bomb_Ai : MonoBehaviour
     {
         AddBounceToPlayer();
         DestroyHeart();
-        Handheld.Vibrate();
         Invoke("ResetPlayerPos", 1f);
         AudioManager.PlayDeathSound();
 

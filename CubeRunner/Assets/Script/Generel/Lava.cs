@@ -53,12 +53,14 @@ public class Lava : MonoBehaviour
         
         
     }
-    
+
+    private void Update()
+    {
+    }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
         AudioManager.PlayDeathSound();
-        Handheld.Vibrate();
         Invoke("ResetPlayerPos", 1f);
         DestroyHeart();
         

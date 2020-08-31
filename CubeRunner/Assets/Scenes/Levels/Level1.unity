@@ -50404,7 +50404,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   GooglePlay_ID: 3788745
-  _NextLevelAi: {fileID: 1706715713}
 --- !u!1 &1338882642
 GameObject:
   m_ObjectHideFlags: 0
@@ -65030,6 +65029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  WinCanvas: {fileID: 0}
   LevelText: {fileID: 494986846}
 --- !u!58 &1706715714
 CircleCollider2D:

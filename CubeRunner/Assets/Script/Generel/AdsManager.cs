@@ -10,7 +10,6 @@ public class AdsManager : MonoBehaviour,IUnityAdsListener
     public string GooglePlay_ID = "3788745";
     string myPlacementId = "rewardedVideo";
     static int EvenNumber = 2;
-    public NextLevelAi _NextLevelAi;
     
     // public string ApplePlay_ID = "3788744";
 
@@ -46,23 +45,14 @@ public class AdsManager : MonoBehaviour,IUnityAdsListener
         // Define conditional logic for each ad completion status:
         if (showResult == ShowResult.Finished)
         {
-            Time.timeScale = 1;
-
-            SceneManager.LoadScene(1);
-
-
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            
         } else if (showResult == ShowResult.Skipped) {
-            Time.timeScale = 1;
-
-            SceneManager.LoadScene(1);
-
+            
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            
         } else if (showResult == ShowResult.Failed) {
-            Time.timeScale = 1;
-
             Debug.LogWarning ("The ad did not finish due to an error.");
-            SceneManager.LoadScene(1);
-
-
         }
     }
 

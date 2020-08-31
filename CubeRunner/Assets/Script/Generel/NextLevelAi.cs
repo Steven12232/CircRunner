@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 public class NextLevelAi : MonoBehaviour
 {
     public GameObject Player;
@@ -12,14 +13,16 @@ public class NextLevelAi : MonoBehaviour
     private ParticleSystem PSystem;
     private Rigidbody2D PlayerRB;
     private SpriteRenderer spriteRenderer;
-<<<<<<< HEAD
 
-    public static float IncreasedTime = 1;
+    private static float IncreasedTime = 1;
+
+    public static int LevelNumber = 1;
+    
+    public Text LevelText;
     
     private GameObject[] NumberOfAiLeft;
     
-=======
->>>>>>> parent of d0b25a5... Basic Infin Game loop
+
     private void Awake()
     {
         PSystem = GetComponentInParent<ParticleSystem>();
@@ -28,39 +31,24 @@ public class NextLevelAi : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    void CheckForLevelTen()
-    {
-        if (SceneManager.GetActiveScene().buildIndex == 10)
-        {
-            Player.SetActive(false);
-            WinCanvas.SetActive(true);
-        }
-    }
+   
     
 
     // Start is called before the first frame update
     void Start()
     {
-
+        CCollider.enabled = false;
+        spriteRenderer.enabled = false;
     }
 
-<<<<<<< HEAD
-    
-    public float TimeIncreaseValue()
-    {
 
-        if (Time.timeScale == 5.0f)
-        {
-            IncreasedTime = 5;
-        }
-        else if (Time.timeScale != 5.0f)
-        {
-            IncreasedTime = IncreasedTime + 0.05f;
-        }
-        
+    float TimeIncreaseValue()
+    {
+        IncreasedTime = IncreasedTime + 0.05f;
 
         return IncreasedTime;
-=======
+    }
+
     void LoadNextSceneAfterDelay()
     {
         if (SceneManager.GetActiveScene().buildIndex != 10)
@@ -71,7 +59,6 @@ public class NextLevelAi : MonoBehaviour
         {
             Debug.Log("Congrats you finished");
         }
->>>>>>> parent of d0b25a5... Basic Infin Game loop
     }
 
     
@@ -79,21 +66,16 @@ public class NextLevelAi : MonoBehaviour
      void OnCollisionEnter2D(Collision2D collision)
     {
         if (!Player) { return; }
-<<<<<<< HEAD
 
         TimeIncreaseValue();
 
+        Time.timeScale = TimeIncreaseValue();
         
         LevelNumber++;
         
-        
-=======
-    
->>>>>>> parent of d0b25a5... Basic Infin Game loop
         AddBounceToPlayer();
         AudioManager.PlayCoinNoise();
         Invoke("LoadNextSceneAfterDelay", 1f);
-        CheckForLevelTen();
         Time.timeScale = 0f;
         //Player.SetActive(false);
     }
@@ -125,7 +107,6 @@ public class NextLevelAi : MonoBehaviour
 
         PSystem.Play();
     }
-<<<<<<< HEAD
 
    
     
@@ -142,12 +123,6 @@ public class NextLevelAi : MonoBehaviour
      { 
          NumberOfAiLeft = GameObject.FindGameObjectsWithTag("AI");
          CheckForNoAiLeft();
-         Time.timeScale = IncreasedTime;
-
-         Debug.Log(IncreasedTime);
-
          LevelText.text = "Level:" + LevelNumber;
     }
-=======
->>>>>>> parent of d0b25a5... Basic Infin Game loop
 }

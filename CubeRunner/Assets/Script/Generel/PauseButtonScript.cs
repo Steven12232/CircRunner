@@ -19,19 +19,17 @@ public class PauseButtonScript : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().buildIndex == 1) //Checks if the scene is 1
         {
-            if (PauseMenuCanvas.activeSelf == true && Rules.activeSelf == false)
+            switch (PauseMenuCanvas.activeSelf)
             {
-                PauseMenuCanvas.SetActive(false);
-                Time.timeScale = 1;
+                case true when Rules.activeSelf == false:
+                    PauseMenuCanvas.SetActive(false);
+                    Time.timeScale = 1;
+                    break;
+                case false when Rules.activeSelf == false:
+                    PauseMenuCanvas.SetActive(true);
+                    Time.timeScale = 0;
+                    break;
             }
-            
-            else if(PauseMenuCanvas.activeSelf == false && Rules.activeSelf == false)
-            {
-                PauseMenuCanvas.SetActive(true);
-                Time.timeScale = 0;
-
-            }
-           
         }
         else if(SceneManager.GetActiveScene().buildIndex != 1) // Checks if the scene is not 1
         {

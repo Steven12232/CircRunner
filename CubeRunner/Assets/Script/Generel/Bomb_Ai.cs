@@ -25,7 +25,7 @@ public class Bomb_Ai : MonoBehaviour
     }
 
 
-    void ResetPlayerPos()
+    private void ResetPlayerPos()
     {
         if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2)
         {
@@ -43,7 +43,7 @@ public class Bomb_Ai : MonoBehaviour
 
     }
 
-    void DestroyHeart()
+    private void DestroyHeart()
     {
         if (_livesRef.Heart3.activeSelf && _livesRef.Heart2.activeSelf && _livesRef.Heart1.activeSelf)
         {
@@ -60,7 +60,7 @@ public class Bomb_Ai : MonoBehaviour
         
         
     }
-     void OnCollisionEnter2D(Collision2D collision)
+     private void OnCollisionEnter2D(Collision2D collision)
     {
         AddBounceToPlayer();
         DestroyHeart();
@@ -82,7 +82,7 @@ public class Bomb_Ai : MonoBehaviour
     {
         
     }
-    void AddBounceToPlayer()
+   private void AddBounceToPlayer()
     {
         if (!PlayerRB)
         {
@@ -99,8 +99,5 @@ public class Bomb_Ai : MonoBehaviour
         PlayerRB.AddForce(force);
     }
     // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }

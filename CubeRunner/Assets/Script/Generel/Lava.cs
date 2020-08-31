@@ -36,7 +36,7 @@ public class Lava : MonoBehaviour
 
     }
     
-    void DestroyHeart()
+   private void DestroyHeart()
     {
         if (_livesRef.Heart3.activeSelf && _livesRef.Heart2.activeSelf && _livesRef.Heart1.activeSelf)
         {

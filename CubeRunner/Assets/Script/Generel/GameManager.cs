@@ -72,16 +72,7 @@ public class GameManager : MonoBehaviour
             Player.SetActive(true);
         }
     }
-
-
-    private IEnumerator StopGameAfterDelay(float DelayTime)
-    {
-        yield return new WaitForSeconds(DelayTime);
-
-        Time.timeScale = 0.0f;
-    }
-
-
+    
     
     
     private void DeactivateRulesWhenPlayerIsSpawned()
@@ -98,7 +89,7 @@ public class GameManager : MonoBehaviour
         if (!_livesRef.Heart3.activeSelf)
         {
            LoseCanvas.SetActive(true);
-           Time.timeScale = 0f;
+           Player.SetActive(false);
         }
     }
 

@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Debug = UnityEngine.Debug;
 
 public class NextLevelAi : MonoBehaviour
 {
     public GameObject Player;
     
-    public static int LevelNumber = 1;
+    public static int  LevelNumber = 1;
     public Text LevelText;
     
     private CircleCollider2D CCollider;
@@ -55,13 +57,23 @@ public class NextLevelAi : MonoBehaviour
 
         return IncreasedTime;
     }
+
+    void CheckForLevel1()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            IncreasedTime = 1;
+            LevelNumber = 1;
+        }
+    }
+    
+    
     
      void OnCollisionEnter2D(Collision2D collision)
     {
         if (!Player) { return; }
 
-        TimeIncreaseValue();
-
+        
         Time.timeScale = TimeIncreaseValue();
         
         LevelNumber++;
@@ -69,6 +81,8 @@ public class NextLevelAi : MonoBehaviour
         AddBounceToPlayer();
         
         AudioManager.PlayCoinNoise();
+        
+        Debug.Log(TimeIncreaseValue());
         
         Invoke("InfinateGameLoop", 1f);
         

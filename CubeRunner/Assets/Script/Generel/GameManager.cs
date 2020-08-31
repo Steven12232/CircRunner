@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     public GameObject Player;
     public GameObject nextLevelAi;
+    public Text LevelText;
     public GameObject RulesText;
     public GameObject ContinueButton;
     public Lives _livesRef;
@@ -18,11 +19,14 @@ public class GameManager : MonoBehaviour
     private static bool DidInvokeHappenForPlayerSpawn;
     private static bool DidPlayerPressContinue;
 
+    private GameObject[] NumberOfAiLeft;
 
+    private int LevelNumber;
 
     private void Awake()
     {
-        
+        LevelNumber = SceneManager.GetActiveScene().buildIndex;
+       
     }
 
     public void ContinueButtonFunction()
@@ -44,7 +48,6 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        
         if (SceneManager.GetActiveScene().buildIndex == 1) Player.SetActive(false);
 
         if (DidInvokeForRulesHappen == false)
@@ -93,14 +96,24 @@ public class GameManager : MonoBehaviour
      void Update()
      
     {
+        LevelText.text = "Level:" + LevelNumber;
         DeactivateRulesWhenPlayerIsSpawned();
+        NumberOfAiLeft = GameObject.FindGameObjectsWithTag("AI");
 
         if (!_livesRef.Heart3.activeSelf)
         {
            LoseCanvas.SetActive(true);
            Time.timeScale = 0f;
         }
+        SetLastAiTrue();
     }
 
-     
+     void SetLastAiTrue()
+    {
+        if (NumberOfAiLeft.Length == 0)
+        {
+            if (nextLevelAi == null) return;
+            nextLevelAi.SetActive(true);
+        }
+    }
 }

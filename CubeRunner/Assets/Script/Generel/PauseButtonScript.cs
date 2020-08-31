@@ -22,31 +22,42 @@ public class PauseButtonScript : MonoBehaviour
             if (PauseMenuCanvas.activeSelf == true && Rules.activeSelf == false)
             {
                 PauseMenuCanvas.SetActive(false);
-                Time.timeScale = 1;
             }
             
             else if(PauseMenuCanvas.activeSelf == false && Rules.activeSelf == false)
             {
                 PauseMenuCanvas.SetActive(true);
-                Time.timeScale = 0;
 
             }
            
         }
         else if(SceneManager.GetActiveScene().buildIndex != 1) // Checks if the scene is not 1
         {
-            switch (PauseMenuCanvas.activeSelf)
+            if (PauseMenuCanvas.activeSelf == true)
             {
-                case true:
-                    PauseMenuCanvas.SetActive(false);
-                    Time.timeScale = 1;
-                    break;
-                case false:
-                    PauseMenuCanvas.SetActive(true);
-                    Time.timeScale = 0;
-                    break;
+                PauseMenuCanvas.SetActive(false);
             }
+            
+            else if(PauseMenuCanvas.activeSelf == false)
+            {
+                PauseMenuCanvas.SetActive(true);
+
+            }
+       
         }
         
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(PauseMenuCanvas.activeSelf == true)
+        {
+            Time.timeScale = 0;
+        }
+        else if(PauseMenuCanvas.activeSelf == false)
+        {
+            Time.timeScale = 1;
+        }
     }
 }

@@ -64746,7 +64746,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
   nextLevelAi: {fileID: 1706715711}
-  LevelText: {fileID: 494986846}
   RulesText: {fileID: 1105768747}
   ContinueButton: {fileID: 117295498}
   _livesRef: {fileID: 1948775464}
@@ -74860,7 +74859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1706715712
 Transform:
   m_ObjectHideFlags: 0
@@ -74889,6 +74888,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
   WinCanvas: {fileID: 0}
+  LevelText: {fileID: 494986846}
 --- !u!58 &1706715714
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -74912,7 +74912,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1706715711}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

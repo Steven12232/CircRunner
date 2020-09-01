@@ -37,12 +37,7 @@ public class AdsManager : MonoBehaviour,IUnityAdsListener
         else if (EvenNumber % 2 == 1)
         {
             EvenNumber++;
-            SceneManager.LoadScene(1);
-            
-            Player.SetActive(true);
-            
-            NextLevelAi.LevelNumber = 1;
-            
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
 
         

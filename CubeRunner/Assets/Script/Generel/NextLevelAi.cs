@@ -53,7 +53,7 @@ public class NextLevelAi : MonoBehaviour
     
     float TimeIncreaseValue()
     {
-        IncreasedTime = IncreasedTime + 0.025f;
+        IncreasedTime = IncreasedTime + 0.05f;
 
         return IncreasedTime;
     }

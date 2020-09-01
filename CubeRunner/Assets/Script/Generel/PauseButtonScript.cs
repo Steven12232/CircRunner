@@ -1,5 +1,7 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -7,7 +9,7 @@ using UnityEngine.UI;
 public class PauseButtonScript : MonoBehaviour
 {
     public GameObject PauseMenuCanvas;
-
+    public TextMeshProUGUI RestartWithAdsText;
     public GameObject Rules;
     // Start is called before the first frame update
     void Start()
@@ -15,6 +17,14 @@ public class PauseButtonScript : MonoBehaviour
         
     }
 
+        
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(1);
+        NextLevelAi.LevelNumber = 1;
+        Time.timeScale = 1f;
+    }
+    
     public void ActivatePauseMenu()
     {
         if(SceneManager.GetActiveScene().buildIndex == 1) //Checks if the scene is 1
@@ -46,5 +56,16 @@ public class PauseButtonScript : MonoBehaviour
             }
         }
         
+    }
+
+
+    void SetRestartTextLevel()
+    {
+        RestartWithAdsText.text = "Restart On Level:" + SceneManager.GetActiveScene().buildIndex;
+    }
+
+     void Update()
+    {
+        SetRestartTextLevel();
     }
 }

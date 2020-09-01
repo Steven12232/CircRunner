@@ -19,7 +19,7 @@ public class NextLevelAi : MonoBehaviour
     private Rigidbody2D PlayerRB;
     private SpriteRenderer spriteRenderer;
 
-    private static float IncreasedTime = 1;
+    public static float IncreasedTime = 1;
     
     private GameObject[] NumberOfAiLeft;
     

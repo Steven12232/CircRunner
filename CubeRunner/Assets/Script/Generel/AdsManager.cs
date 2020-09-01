@@ -10,7 +10,6 @@ public class AdsManager : MonoBehaviour,IUnityAdsListener
 {
     public string GooglePlay_ID = "3788745";
     string myPlacementId = "rewardedVideo";
-    static int EvenNumber = 2;
 
     public GameObject Player;
     
@@ -29,17 +28,8 @@ public class AdsManager : MonoBehaviour,IUnityAdsListener
 
     public void DisplayVideo_AD()
     {
-        if (EvenNumber % 2 == 0)
-        {
-            Advertisement.Show(myPlacementId);
-            EvenNumber++;
-        }
-        else if (EvenNumber % 2 == 1)
-        {
-            EvenNumber++;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
-
+       
+        Advertisement.Show(myPlacementId);
         
     }
     
@@ -48,31 +38,27 @@ public class AdsManager : MonoBehaviour,IUnityAdsListener
         // Define conditional logic for each ad completion status:
         if (showResult == ShowResult.Finished)
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             
             Player.SetActive(true);
             
-            NextLevelAi.LevelNumber = 1; //resets the level number
-            
-            Time.timeScale = 1f;
+            NextLevelAi.IncreasedTime = 1f;
+
 
         } else if (showResult == ShowResult.Skipped) {
             
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             
             Player.SetActive(true);
             
-            NextLevelAi.LevelNumber = 1; //resets the level number
 
-            Time.timeScale = 1f;
+            NextLevelAi.IncreasedTime = 1f;
 
         } else if (showResult == ShowResult.Failed) {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             
-            Time.timeScale = 1f;
+            NextLevelAi.IncreasedTime = 1f;
             
-            NextLevelAi.LevelNumber = 1; //resets the level number
-
             Player.SetActive(true);
             
             Debug.LogWarning ("The ad did not finish due to an error.");

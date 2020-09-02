@@ -35,7 +35,7 @@ public class NextLevelAi : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().buildIndex == 20)
         {
-            SceneManager.LoadScene(8);
+            SceneManager.LoadScene(13);
         }
         else if (SceneManager.GetActiveScene().buildIndex != 20)
         {

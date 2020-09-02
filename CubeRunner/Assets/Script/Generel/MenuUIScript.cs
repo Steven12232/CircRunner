@@ -16,6 +16,8 @@ public class MenuUIScript : MonoBehaviour
     public void PlayButtonStart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        NextLevelAi.LevelNumber = 1;
+        Time.timeScale = 1f;
     }
 
     public void QuitButton()

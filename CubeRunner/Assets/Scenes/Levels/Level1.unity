@@ -51033,7 +51033,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb47bae549e0caa429e2dd63297c1840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GooglePlay_ID: 3788745
+  AppStore_ID: 3788744
   Player: {fileID: 945280137}
 --- !u!1 &1338882642
 GameObject:

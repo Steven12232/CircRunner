@@ -18,6 +18,7 @@ public class PlayerScript : MonoBehaviour
     public Lava _Lava;
     
     float dirX;
+     float dirY;
     float moveSpeed;
 
     // Start is called before the first frame update
@@ -44,7 +45,7 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         dirX = Input.acceleration.x * moveSpeed;
-
+        
         if (SceneManager.GetActiveScene().buildIndex <= 3)
         {
             moveSpeed = 100;
@@ -96,7 +97,7 @@ public class PlayerScript : MonoBehaviour
          Vector2 force = new Vector2(XForce, YForce);
 
         Rb.AddForce(force);
-        Vector2 PhoneForce = new Vector2(dirX, 0);
+        Vector2 PhoneForce = new Vector2(dirX,0);
         Rb.AddForce(PhoneForce);
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
@@ -19,6 +20,8 @@ public class PlayerScript : MonoBehaviour
     
     float dirX;
     float moveSpeed;
+
+    public float MaxSpeed = 50.0f;
 
     // Start is called before the first frame update
 
@@ -69,7 +72,7 @@ public class PlayerScript : MonoBehaviour
         if(Rb != null)
         {
             ApplyInput();
-          
+            MaxVelocityCap();
         }
         
         else
@@ -97,6 +100,13 @@ public class PlayerScript : MonoBehaviour
 
         Rb.AddForce(force);
         Vector2 PhoneForce = new Vector2(dirX, 0);
-        Rb.AddForce(PhoneForce);
+        Rb.AddForce(PhoneForce, ForceMode2D.Impulse);
+    }
+
+    public void MaxVelocityCap()
+    {
+        float cappedXVelocity = Mathf.Min(Mathf.Abs(Rb.velocity.x), MaxSpeed) * Mathf.Sign(Rb.velocity.x);
+        
+        Rb.velocity = new Vector2(cappedXVelocity, gameObject.transform.position.y);
     }
 }

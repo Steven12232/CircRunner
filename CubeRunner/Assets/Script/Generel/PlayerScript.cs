@@ -2,6 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
+using UnityEngine.UI; 
 
 public class PlayerScript : MonoBehaviour
 {
@@ -15,7 +18,7 @@ public class PlayerScript : MonoBehaviour
     public Lava _Lava;
     
     float dirX;
-    float moveSpeed = 100.0f;
+    float moveSpeed;
 
     // Start is called before the first frame update
 
@@ -26,7 +29,6 @@ public class PlayerScript : MonoBehaviour
         _spriteRenderer = GetComponent<SpriteRenderer>();
         particle = GetComponentInChildren<ParticleSystem>();
         Rb = GetComponent<Rigidbody2D>();
-        
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -42,10 +44,17 @@ public class PlayerScript : MonoBehaviour
     void Update()
     {
         dirX = Input.acceleration.x * moveSpeed;
+
+        if (SceneManager.GetActiveScene().buildIndex <= 3)
+        {
+            moveSpeed = 100;
+        }
+        else if (SceneManager.GetActiveScene().buildIndex >= 4)
+        {
+            moveSpeed = 120;
+        }
         
-        
-        
-        
+        Debug.Log(moveSpeed);
         
         
         if (gameObject.transform.position == _Lava.RestartPos || gameObject.transform.position == _Lava.RestartPos3 || gameObject.transform.position == _Lava.RestartPos4Up)

@@ -62,10 +62,9 @@ public class Bomb_Ai : MonoBehaviour
     }
      private void OnCollisionEnter2D(Collision2D collision)
     {
-        AddBounceToPlayer();
         DestroyHeart();
         Handheld.Vibrate();
-        Invoke("ResetPlayerPos", 1f);
+        Invoke(nameof(ResetPlayerPos), 1f);
         AudioManager.PlayDeathSound();
 
         
@@ -82,22 +81,4 @@ public class Bomb_Ai : MonoBehaviour
     {
         
     }
-   private void AddBounceToPlayer()
-    {
-        if (!PlayerRB)
-        {
-            return;
-        }
-
-
-        float MoveSpeed = 2000;
-        float YThrust = 20f;
-        float FinalYThrust = YThrust * MoveSpeed * Time.deltaTime;
-
-        Vector2 force = new Vector2(0, FinalYThrust);
-
-        PlayerRB.AddForce(force);
-    }
-    // Update is called once per frame
-    
 }

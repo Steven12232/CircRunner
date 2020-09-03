@@ -15,7 +15,7 @@ public class PlayerScript : MonoBehaviour
     public Lava _Lava;
     
     float dirX;
-    float moveSpeed = 50.0f;
+    float moveSpeed = 100.0f;
 
     // Start is called before the first frame update
 
@@ -62,6 +62,7 @@ public class PlayerScript : MonoBehaviour
             ApplyInput();
           
         }
+        
         else
         {
             Debug.Log("Rigidbody not attached to player" + gameObject.name);

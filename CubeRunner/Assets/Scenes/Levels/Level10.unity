@@ -3143,8 +3143,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000019073, y: -286}
-  m_SizeDelta: {x: 265.9665, y: 54.49774}
+  m_AnchoredPosition: {x: 0.0000019073, y: -298}
+  m_SizeDelta: {x: 265.9665, y: 78.33533}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &108475171
 MonoBehaviour:
@@ -70843,7 +70843,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb47bae549e0caa429e2dd63297c1840, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GooglePlay_ID: 3788745
+  AppStore_ID: 3788744
   Player: {fileID: 945280137}
 --- !u!1 &1338882642
 GameObject:

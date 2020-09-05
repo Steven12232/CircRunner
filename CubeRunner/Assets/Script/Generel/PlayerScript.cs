@@ -20,6 +20,8 @@ public class PlayerScript : MonoBehaviour
     float dirX;
     float moveSpeed;
 
+    private Vector2 PhoneForce;
+    public float MaxSpeed;
     // Start is called before the first frame update
 
    
@@ -47,15 +49,12 @@ public class PlayerScript : MonoBehaviour
 
         if (SceneManager.GetActiveScene().buildIndex <= 3)
         {
-            moveSpeed = 100;
+            moveSpeed = 50.0f;
         }
         else if (SceneManager.GetActiveScene().buildIndex >= 4)
         {
-            moveSpeed = 120;
+            moveSpeed = 60.0f;
         }
-        
-        Debug.Log(moveSpeed);
-        
         
         if (gameObject.transform.position == _Lava.RestartPos || gameObject.transform.position == _Lava.RestartPos3 || gameObject.transform.position == _Lava.RestartPos4Up)
         {
@@ -69,7 +68,7 @@ public class PlayerScript : MonoBehaviour
         if(Rb != null)
         {
             ApplyInput();
-          
+            CapVelocity();
         }
         
         else
@@ -96,7 +95,14 @@ public class PlayerScript : MonoBehaviour
          Vector2 force = new Vector2(XForce, YForce);
 
         Rb.AddForce(force);
-        Vector2 PhoneForce = new Vector2(dirX, 0);
+         PhoneForce = new Vector2(dirX, 0);
         Rb.AddForce(PhoneForce);
+    }
+
+    public void CapVelocity()
+    {
+        float CappedYVelocity = Mathf.Min(Mathf.Abs(Rb.velocity.y), MaxSpeed) * Mathf.Sign(Rb.velocity.y);
+        
+        Rb.velocity = new Vector2(PhoneForce.x, CappedYVelocity);
     }
 }

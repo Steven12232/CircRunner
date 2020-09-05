@@ -23,7 +23,6 @@ public class MenuUIScript : MonoBehaviour
     public void QuitButton()
     {
         Application.Quit();
-        Debug.Log("Qutting App");
     }
 
     public void LoadMainMenu()

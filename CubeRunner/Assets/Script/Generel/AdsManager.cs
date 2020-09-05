@@ -12,10 +12,11 @@ public class AdsManager : MonoBehaviour,IUnityAdsListener
     string myPlacementId = "rewardedVideo";
 
     public GameObject Player;
-    
+
     // public string ApplePlay_ID = "3788744";
 
      bool GameMode = true;
+
     // Start is called before the first frame update
 
     
@@ -41,6 +42,8 @@ public class AdsManager : MonoBehaviour,IUnityAdsListener
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             
             Player.SetActive(true);
+
+            NextLevelAi.DidMaxSpeedIncreaseHappen = false;
             
             NextLevelAi.IncreasedTime = 1f;
 
@@ -53,6 +56,7 @@ public class AdsManager : MonoBehaviour,IUnityAdsListener
             
             Player.SetActive(true);
             
+            NextLevelAi.DidMaxSpeedIncreaseHappen = false;
 
             NextLevelAi.IncreasedTime = 1f;
 
@@ -63,11 +67,12 @@ public class AdsManager : MonoBehaviour,IUnityAdsListener
             
             NextLevelAi.IncreasedTime = 1f;
             
+            NextLevelAi.DidMaxSpeedIncreaseHappen = false;
+
             Player.SetActive(true);
             
             Time.timeScale = 1f;
 
-            Debug.LogWarning ("The ad did not finish due to an error.");
         }
     }
 

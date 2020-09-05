@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &1296025
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -36826,6 +36827,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &416964222
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -49524,6 +49526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &536482419
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -60297,6 +60300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &758429555
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -61651,6 +61655,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &808571756
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -65013,6 +65018,7 @@ MonoBehaviour:
   ThrustSpeed: 850
   _BombAi: {fileID: 0}
   _Lava: {fileID: 2125994901}
+  MaxSpeed: 25
 --- !u!212 &945280140
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -69124,6 +69130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &1095965072
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -72141,6 +72148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &1216173120
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -78697,6 +78705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &1427461824
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -79700,6 +79709,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &1485065731
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -79974,6 +79984,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &1487003943
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -105298,6 +105309,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
   LevelText: {fileID: 494986846}
+  playerScript: {fileID: 945280139}
+  NewMaxPLayerSpeed: 0
 --- !u!58 &1706715714
 CircleCollider2D:
   m_ObjectHideFlags: 0

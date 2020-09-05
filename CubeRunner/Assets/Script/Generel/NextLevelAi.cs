@@ -22,7 +22,11 @@ public class NextLevelAi : MonoBehaviour
     public static float IncreasedTime = 1;
     
     private GameObject[] NumberOfAiLeft;
-    
+    public PlayerScript playerScript;
+
+    public float NewMaxPLayerSpeed;
+
+      public static bool DidMaxSpeedIncreaseHappen = false;
     private void Awake()
     {
         PSystem = GetComponentInParent<ParticleSystem>();
@@ -66,7 +70,26 @@ public class NextLevelAi : MonoBehaviour
             LevelNumber = 1;
         }
     }
-    
+
+
+
+    void IncreaseMaxPlayerSpeed()
+    {
+        playerScript.MaxSpeed = 25.0f;
+        if (playerScript.MaxSpeed == 25.0f)
+        {
+            NewMaxPLayerSpeed = playerScript.MaxSpeed + 0.25f;
+            playerScript.MaxSpeed = NewMaxPLayerSpeed;
+        }
+        else if (playerScript.MaxSpeed != 25.0f)
+        {
+            NewMaxPLayerSpeed = playerScript.MaxSpeed + 0.25f;
+            playerScript.MaxSpeed = NewMaxPLayerSpeed;
+        }
+
+    }
+
+   
     
     
      void OnCollisionEnter2D(Collision2D collision)
@@ -81,8 +104,11 @@ public class NextLevelAi : MonoBehaviour
         AddBounceToPlayer();
         
         AudioManager.PlayCoinNoise();
+
         
-        Debug.Log(TimeIncreaseValue());
+        IncreaseMaxPlayerSpeed();
+        
+        Debug.Log(playerScript.MaxSpeed.ToString());
         
         Invoke("InfinateGameLoop", 1f);
         

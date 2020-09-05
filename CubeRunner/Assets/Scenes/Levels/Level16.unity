@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &1296025
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5578,6 +5579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &30824598
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -14736,6 +14738,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &167804859
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -32237,6 +32240,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &416964222
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -43319,6 +43323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &479457548
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -49860,6 +49865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &536482419
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -58589,6 +58595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &683119886
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -61987,6 +61994,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &808571756
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -70162,6 +70170,7 @@ MonoBehaviour:
   ThrustSpeed: 850
   _BombAi: {fileID: 0}
   _Lava: {fileID: 2125994901}
+  MaxSpeed: 25
 --- !u!212 &945280140
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -71974,6 +71983,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &995154639
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -78469,6 +78479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &1067944409
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -88926,6 +88937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &1280161689
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -89524,6 +89536,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &1288001160
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -98625,6 +98638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &1427461824
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -99628,6 +99642,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &1485065731
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -123869,6 +123884,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
+  playerScript: {fileID: 945280139}
 --- !u!58 &1648102665
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -129929,6 +129945,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
   LevelText: {fileID: 494986846}
+  playerScript: {fileID: 945280139}
+  NewMaxPLayerSpeed: 0
 --- !u!58 &1706715714
 CircleCollider2D:
   m_ObjectHideFlags: 0

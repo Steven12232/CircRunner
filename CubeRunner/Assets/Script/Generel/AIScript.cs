@@ -1,5 +1,6 @@
-﻿using UnityEngine;
-
+﻿using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 public class AIScript : MonoBehaviour
 {
     public GameObject Player;
@@ -9,6 +10,9 @@ public class AIScript : MonoBehaviour
     private Rigidbody2D PlayerRB;
     private SpriteRenderer spriteRenderer;
 
+    public PlayerScript playerScript;
+    
+    
     private void Awake()
     {
         PSystem = GetComponentInParent<ParticleSystem>();
@@ -16,6 +20,8 @@ public class AIScript : MonoBehaviour
         PlayerRB = Player.GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
+
+    
 
 
     // Start is called before the first frame update
@@ -36,13 +42,10 @@ public class AIScript : MonoBehaviour
     {
         if (!PlayerRB) return;
 
-
-        float MoveSpeed = 3200;
         var YThrust = 21f;
-        var FinalYThrust = YThrust * MoveSpeed * Time.deltaTime;
+        var FinalYThrust = YThrust * 2900 * Time.deltaTime;
 
         var force = new Vector2(0, FinalYThrust);
-
         PlayerRB.AddForce(force);
     }
 
@@ -50,7 +53,6 @@ public class AIScript : MonoBehaviour
     {
         if (!PSystem)
         {
-            Debug.Log("No PSystem");
             return;
         }
 

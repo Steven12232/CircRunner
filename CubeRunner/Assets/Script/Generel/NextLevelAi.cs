@@ -57,7 +57,7 @@ public class NextLevelAi : MonoBehaviour
     
     float TimeIncreaseValue()
     {
-        IncreasedTime = IncreasedTime + 0.05f;
+        IncreasedTime = IncreasedTime + 0.025f;
 
         return IncreasedTime;
     }
@@ -72,7 +72,7 @@ public class NextLevelAi : MonoBehaviour
     }
 
 
-
+    
     void IncreaseMaxPlayerSpeed()
     {
         playerScript.MaxSpeed = 25.0f;
@@ -105,7 +105,6 @@ public class NextLevelAi : MonoBehaviour
         
         AudioManager.PlayCoinNoise();
 
-        
         IncreaseMaxPlayerSpeed();
         
         Debug.Log(playerScript.MaxSpeed.ToString());

@@ -56,7 +56,7 @@ public class PlayerScript : MonoBehaviour
             moveSpeed = 60.0f;
         }
         
-        if (gameObject.transform.position == _Lava.RestartPos || gameObject.transform.position == _Lava.RestartPos3 || gameObject.transform.position == _Lava.RestartPos4Up)
+        if (gameObject.transform.position == _Lava.RestartPos )
         {
             _spriteRenderer.enabled = true;
             Rb.simulated = true;

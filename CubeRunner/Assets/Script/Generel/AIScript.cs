@@ -42,8 +42,8 @@ public class AIScript : MonoBehaviour
     {
         if (!PlayerRB) return;
 
-        var YThrust = 21f;
-        var FinalYThrust = YThrust * 2900 * Time.deltaTime;
+        var YThrust = 20f;
+        var FinalYThrust = YThrust * 2250 * Time.deltaTime;
 
         var force = new Vector2(0, FinalYThrust);
         PlayerRB.AddForce(force);

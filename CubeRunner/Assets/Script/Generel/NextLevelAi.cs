@@ -37,11 +37,11 @@ public class NextLevelAi : MonoBehaviour
 
     public void InfinateGameLoop()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 20)
+        if (SceneManager.GetActiveScene().buildIndex == 15)
         {
-            SceneManager.LoadScene(13);
+            SceneManager.LoadScene(8);
         }
-        else if (SceneManager.GetActiveScene().buildIndex != 20)
+        else if (SceneManager.GetActiveScene().buildIndex != 15)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
@@ -95,7 +95,6 @@ public class NextLevelAi : MonoBehaviour
      void OnCollisionEnter2D(Collision2D collision)
     {
         if (!Player) { return; }
-
         
         Time.timeScale = TimeIncreaseValue();
         
@@ -104,7 +103,6 @@ public class NextLevelAi : MonoBehaviour
         AddBounceToPlayer();
         
         AudioManager.PlayCoinNoise();
-
         
         IncreaseMaxPlayerSpeed();
         
@@ -112,7 +110,8 @@ public class NextLevelAi : MonoBehaviour
         
         Invoke("InfinateGameLoop", 1f);
         
-        
+        CCollider.isTrigger = true;
+
     }
 
     void AddBounceToPlayer()

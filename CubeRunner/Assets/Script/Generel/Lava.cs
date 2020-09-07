@@ -11,28 +11,19 @@ public class Lava : MonoBehaviour
     public Lives _livesRef;
     
     public Vector3 RestartPos;
-    public Vector3 RestartPos3;
-    public Vector3 RestartPos4Up;
-    
+
     public GameObject Player;
 
 
 
     void ResetPlayerPos()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2)
+        if (SceneManager.GetActiveScene().buildIndex >= 1)
         {
             Player.transform.position = RestartPos;
           
         }
-        if (SceneManager.GetActiveScene().buildIndex == 3)
-        {
-            Player.transform.position = RestartPos3;
-        }
-        if (SceneManager.GetActiveScene().buildIndex >=4)
-        {
-            Player.transform.position = RestartPos4Up;
-        }
+      
 
     }
     

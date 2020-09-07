@@ -62,6 +62,7 @@ public class PauseButtonScript : MonoBehaviour
     void SetRestartTextLevel()
     {
         RestartWithAdsText.text = "Restart On Level:" + NextLevelAi.LevelNumber.ToString();
+        RestartWithAdsText.fontSize = 28;
     }
 
      void Update()

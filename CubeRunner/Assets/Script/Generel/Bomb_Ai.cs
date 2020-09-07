@@ -10,8 +10,6 @@ public class Bomb_Ai : MonoBehaviour
     public Lives _livesRef;
     
     public Vector3 RestartPos;
-    public Vector3 RestartPos3;
-    public Vector3 RestartPos4Up;
     
     CircleCollider2D CCollider;
     SpriteRenderer spriteRenderer;
@@ -27,19 +25,12 @@ public class Bomb_Ai : MonoBehaviour
 
     private void ResetPlayerPos()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 1 || SceneManager.GetActiveScene().buildIndex == 2)
+        if (SceneManager.GetActiveScene().buildIndex >= 1)
         {
             Player.transform.position = RestartPos;
           
         }
-        if (SceneManager.GetActiveScene().buildIndex == 3)
-        {
-            Player.transform.position = RestartPos3;
-        }
-        if (SceneManager.GetActiveScene().buildIndex >=4)
-        {
-            Player.transform.position = RestartPos4Up;
-        }
+     
 
     }
 

@@ -44,9 +44,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        
-        if (SceneManager.GetActiveScene().buildIndex == 1) Player.SetActive(false);
 
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            Player.SetActive(false);
+            
+        }
+        
         if (DidInvokeForRulesHappen == false)
             RulesText.SetActive(true); 
         else

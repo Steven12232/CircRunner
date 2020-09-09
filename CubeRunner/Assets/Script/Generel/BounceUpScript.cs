@@ -29,7 +29,7 @@ public class BounceUpScript : MonoBehaviour
         if (!PlayerRB) return;
 
         var YThrust = 20;
-        var FinalYThrust = YThrust * 5000 * Time.deltaTime;
+        var FinalYThrust = YThrust * 2000 * Time.deltaTime;
 
         var force = new Vector2(0, FinalYThrust);
         PlayerRB.AddForce(force);

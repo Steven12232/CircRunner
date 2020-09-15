@@ -18,7 +18,9 @@ public class NextLevelAi : MonoBehaviour
     private ParticleSystem PSystem;
     private Rigidbody2D PlayerRB;
     private SpriteRenderer spriteRenderer;
-
+    private CircleCollider2D PlayerCollider;
+    
+    
     public static float IncreasedTime = 1;
     
     private GameObject[] NumberOfAiLeft;
@@ -33,6 +35,7 @@ public class NextLevelAi : MonoBehaviour
         CCollider = GetComponent<CircleCollider2D>();
         PlayerRB = Player.GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        PlayerCollider = Player.GetComponent<CircleCollider2D>();
     }
 
     public void InfinateGameLoop()
@@ -111,6 +114,8 @@ public class NextLevelAi : MonoBehaviour
         Invoke("InfinateGameLoop", 1f);
         
         CCollider.isTrigger = true;
+
+        PlayerCollider.isTrigger = true;
 
     }
 

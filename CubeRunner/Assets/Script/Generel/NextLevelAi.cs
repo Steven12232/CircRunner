@@ -19,7 +19,8 @@ public class NextLevelAi : MonoBehaviour
     private Rigidbody2D PlayerRB;
     private SpriteRenderer spriteRenderer;
     private CircleCollider2D PlayerCollider;
-    
+
+    public GameManager gameManager;
     
     public static float IncreasedTime = 1;
     
@@ -40,11 +41,11 @@ public class NextLevelAi : MonoBehaviour
 
     public void InfinateGameLoop()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 15)
+        if (SceneManager.GetActiveScene().buildIndex == 18)
         {
-            SceneManager.LoadScene(8);
+            SceneManager.LoadScene(12);
         }
-        else if (SceneManager.GetActiveScene().buildIndex != 15)
+        else if (SceneManager.GetActiveScene().buildIndex != 18)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
@@ -74,7 +75,21 @@ public class NextLevelAi : MonoBehaviour
         }
     }
 
+    void WaitForDelay()
+    {
+        Time.timeScale = 0.0f;
+    }
+    
+    
+    void checkForLevel11()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 10)
+        {
+            Player.SetActive(false);
+            Invoke("WaitForDelay", 1f);
+        }
 
+    }
 
     void IncreaseMaxPlayerSpeed()
     {
@@ -108,6 +123,8 @@ public class NextLevelAi : MonoBehaviour
         AudioManager.PlayCoinNoise();
         
         IncreaseMaxPlayerSpeed();
+        
+        checkForLevel11();
         
         Debug.Log(playerScript.MaxSpeed.ToString());
         

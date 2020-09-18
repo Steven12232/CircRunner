@@ -10,13 +10,20 @@ public class GameManager : MonoBehaviour
     public GameObject Player;
     public GameObject nextLevelAi;
     public GameObject RulesText;
+    public GameObject RulesTextForLevel11;
     public GameObject ContinueButton;
     public Lives _livesRef;
     public GameObject LoseCanvas;
+    public GameObject BounceObjectsToDectavateForLevel11;
+    public GameObject ContinueButtonForLevel11;
     
     private static bool DidInvokeForRulesHappen;
     private static bool DidInvokeHappenForPlayerSpawn;
     private static bool DidPlayerPressContinue;
+    
+    private static bool DidInvokeForRulesHappenForLevel11;
+    private static bool DidInvokeHappenForPlayerSpawnForLevel11;
+    private static bool DidPlayerPressContinueFoeLevel11;
 
 
 
@@ -30,6 +37,14 @@ public class GameManager : MonoBehaviour
         DidPlayerPressContinue = true;
         InvokeSetPlayerAfterDelay();
         Destroy(ContinueButton, 0.1f);
+    }
+
+    public void ContinueButtonFunctionForLevel11()
+    {
+        DidPlayerPressContinueFoeLevel11 = true;
+        InvokeSetPlayerAfterDelayForLevel11();
+        RulesTextForLevel11.SetActive(false);
+        Destroy(ContinueButtonForLevel11, 0.1f);
     }
 
     private void SetPlayerActiveAfterDelay()
@@ -63,6 +78,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void InvokeSetPlayerAfterDelayForLevel11()
+    {
+        if (DidInvokeHappenForPlayerSpawnForLevel11 == false)
+        {
+            if (DidPlayerPressContinueFoeLevel11) SetPlayerActiveAfterDelay();
+
+            DidInvokeHappenForPlayerSpawnForLevel11 = true;
+        }
+        else if (DidInvokeHappenForPlayerSpawnForLevel11)
+        {
+            Player.SetActive(true);
+        }
+    }
+
+    
     private void InvokeSetPlayerAfterDelay()
     {
         if (DidInvokeHappenForPlayerSpawn == false)
@@ -81,7 +111,9 @@ public class GameManager : MonoBehaviour
     
     private void DeactivateRulesWhenPlayerIsSpawned()
     {
+
         if (Player.activeSelf) RulesText.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -90,6 +122,20 @@ public class GameManager : MonoBehaviour
     {
         DeactivateRulesWhenPlayerIsSpawned();
 
+        if (SceneManager.GetActiveScene().buildIndex == 11)
+        {
+            if (DidPlayerPressContinueFoeLevel11 == true)
+            {
+                Time.timeScale = NextLevelAi.IncreasedTime;
+                BounceObjectsToDectavateForLevel11.SetActive(true);
+            }
+            else
+            {
+                BounceObjectsToDectavateForLevel11.SetActive(false);
+            }
+        }
+        
+        
         if (!_livesRef.Heart3.activeSelf)
         {
            LoseCanvas.SetActive(true);

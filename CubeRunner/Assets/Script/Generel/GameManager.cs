@@ -113,6 +113,15 @@ public class GameManager : MonoBehaviour
     {
 
         if (Player.activeSelf) RulesText.SetActive(false);
+
+        if (SceneManager.GetActiveScene().buildIndex == 11 && Time.timeScale == NextLevelAi.IncreasedTime)
+        {
+            RulesTextForLevel11.SetActive(false);
+            if (ContinueButtonForLevel11 == null)
+            {
+                ContinueButtonForLevel11.SetActive(false);
+            }
+        }
         
     }
 
@@ -120,7 +129,6 @@ public class GameManager : MonoBehaviour
      void Update()
      
     {
-        DeactivateRulesWhenPlayerIsSpawned();
 
         if (SceneManager.GetActiveScene().buildIndex == 11)
         {
@@ -141,6 +149,9 @@ public class GameManager : MonoBehaviour
            LoseCanvas.SetActive(true);
            Player.SetActive(false);
         }
+        
+        DeactivateRulesWhenPlayerIsSpawned();
+
     }
 
      

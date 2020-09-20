@@ -10,7 +10,7 @@ public class AdsManager : MonoBehaviour,IUnityAdsListener
 {
     public string AppStore_ID = "3788744";
     string myPlacementId = "rewardedVideo";
-
+    public GameManager gameManager;
     public GameObject Player;
 
     // public string ApplePlay_ID = "3788744";
@@ -48,6 +48,8 @@ public class AdsManager : MonoBehaviour,IUnityAdsListener
             NextLevelAi.IncreasedTime = 1f;
 
             Time.timeScale = 1f;
+            
+            gameManager.ContinueButtonForLevel11.SetActive(false);
 
 
         } else if (showResult == ShowResult.Skipped) {
@@ -61,6 +63,8 @@ public class AdsManager : MonoBehaviour,IUnityAdsListener
             NextLevelAi.IncreasedTime = 1f;
 
             Time.timeScale = 1f;
+            
+            gameManager.ContinueButtonForLevel11.SetActive(false);
 
         } else if (showResult == ShowResult.Failed) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -72,6 +76,8 @@ public class AdsManager : MonoBehaviour,IUnityAdsListener
             Player.SetActive(true);
             
             Time.timeScale = 1f;
+            
+            gameManager.ContinueButtonForLevel11.SetActive(false);
 
         }
     }

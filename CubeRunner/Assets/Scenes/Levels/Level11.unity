@@ -81291,6 +81291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AppStore_ID: 3788744
+  gameManager: {fileID: 1517094521}
   Player: {fileID: 945280137}
 --- !u!1 &1338882642
 GameObject:

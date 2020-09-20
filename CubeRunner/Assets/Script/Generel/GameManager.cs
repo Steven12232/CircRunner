@@ -43,9 +43,17 @@ public class GameManager : MonoBehaviour
     {
         DidPlayerPressContinueFoeLevel11 = true;
         InvokeSetPlayerAfterDelayForLevel11();
-        RulesTextForLevel11.SetActive(false);
-        Destroy(ContinueButtonForLevel11, 0.1f);
+        DeactivateButton();
     }
+
+    void DeactivateButton()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 11 && DidPlayerPressContinueFoeLevel11 == true)
+        {
+            ContinueButtonForLevel11.SetActive(false);
+        }
+    }
+    
 
     private void SetPlayerActiveAfterDelay()
     {
@@ -108,20 +116,23 @@ public class GameManager : MonoBehaviour
     }
     
     
-    
+    private void DeactivateRulesWhenPlayerIsSpawnedForLevel11()
+    {
+
+      
+        if (SceneManager.GetActiveScene().buildIndex == 11 && Time.timeScale == NextLevelAi.IncreasedTime)
+        {
+            RulesTextForLevel11.SetActive(false);
+     
+        }
+        
+    }
+
     private void DeactivateRulesWhenPlayerIsSpawned()
     {
 
         if (Player.activeSelf) RulesText.SetActive(false);
-
-        if (SceneManager.GetActiveScene().buildIndex == 11 && Time.timeScale == NextLevelAi.IncreasedTime)
-        {
-            RulesTextForLevel11.SetActive(false);
-            if (ContinueButtonForLevel11 == null)
-            {
-                ContinueButtonForLevel11.SetActive(false);
-            }
-        }
+        
         
     }
 
@@ -151,6 +162,8 @@ public class GameManager : MonoBehaviour
         }
         
         DeactivateRulesWhenPlayerIsSpawned();
+        DeactivateButton();
+        DeactivateRulesWhenPlayerIsSpawnedForLevel11();
 
     }
 

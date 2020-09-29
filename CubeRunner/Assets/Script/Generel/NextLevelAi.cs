@@ -28,6 +28,7 @@ public class NextLevelAi : MonoBehaviour
     public PlayerScript playerScript;
 
     public float NewMaxPLayerSpeed;
+    public static bool DidMaxSpeedIncreaseHappen = false;
     private void Awake()
     {
         PSystem = GetComponentInParent<ParticleSystem>();

@@ -3,7 +3,7 @@ using System.Resources;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public GameObject LoseCanvas;
     public GameObject BounceObjectsToDectavateForLevel11;
     public GameObject ContinueButtonForLevel11;
+
+  
     
     private static bool DidInvokeForRulesHappen;
     private static bool DidInvokeHappenForPlayerSpawn;
@@ -31,7 +33,8 @@ public class GameManager : MonoBehaviour
     {
         
     }
-
+    
+    
     public void ContinueButtonFunction()
     {
         DidPlayerPressContinue = true;
@@ -57,6 +60,7 @@ public class GameManager : MonoBehaviour
 
     private void SetPlayerActiveAfterDelay()
     {
+        
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             Player.SetActive(true);

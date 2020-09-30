@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Debug = UnityEngine.Debug;
+using Random = UnityEngine.Random;
 
 public class NextLevelAi : MonoBehaviour
 {
@@ -19,7 +20,8 @@ public class NextLevelAi : MonoBehaviour
     private Rigidbody2D PlayerRB;
     private SpriteRenderer spriteRenderer;
     private CircleCollider2D PlayerCollider;
-
+    private int RandomLevelNumber;
+    
     public GameManager gameManager;
     
     public static float IncreasedTime = 1;
@@ -40,6 +42,18 @@ public class NextLevelAi : MonoBehaviour
 
     public void InfinateGameLoop()
     {
+
+        if (SceneManager.GetActiveScene().buildIndex < 11)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex >= 11)
+        {
+            RandomLevelNumber = Random.Range(12, 23);
+            SceneManager.LoadScene(RandomLevelNumber);
+        }
+        
+        
         if (SceneManager.GetActiveScene().buildIndex == 18)
         {
             SceneManager.LoadScene(12);

@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     {
         DidPlayerPressContinue = true;
         InvokeSetPlayerAfterDelay();
+        Time.timeScale = 1.0f;
         Destroy(ContinueButton, 0.1f);
     }
 
@@ -46,12 +47,13 @@ public class GameManager : MonoBehaviour
     {
         DidPlayerPressContinueFoeLevel11 = true;
         InvokeSetPlayerAfterDelayForLevel11();
+        Time.timeScale = 1.0f;
         DeactivateButton();
     }
 
     void DeactivateButton()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 11 && DidPlayerPressContinueFoeLevel11 == true)
+        if (SceneManager.GetActiveScene().buildIndex == 11 && DidPlayerPressContinueFoeLevel11)
         {
             ContinueButtonForLevel11.SetActive(false);
         }
@@ -83,7 +85,7 @@ public class GameManager : MonoBehaviour
         else
             RulesText.SetActive(false);
 
-        if (DidPlayerPressContinue == true)
+        if (DidPlayerPressContinue)
         {
             ContinueButton.SetActive(false);
             Player.SetActive(true);
@@ -162,6 +164,7 @@ public class GameManager : MonoBehaviour
         if (!_livesRef.Heart3.activeSelf)
         {
            LoseCanvas.SetActive(true);
+           Time.timeScale = 0.0f;
            Player.SetActive(false);
         }
         

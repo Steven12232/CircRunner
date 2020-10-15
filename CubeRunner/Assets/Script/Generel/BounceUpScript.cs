@@ -33,6 +33,8 @@ public class BounceUpScript : MonoBehaviour
 
         var force = new Vector2(0, FinalYThrust);
         PlayerRB.AddForce(force);
+
+       
     }
     
 }

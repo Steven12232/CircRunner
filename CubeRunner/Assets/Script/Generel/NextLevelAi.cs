@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Xml.Schema;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -14,6 +15,7 @@ public class NextLevelAi : MonoBehaviour
     
     public static int  LevelNumber = 1;
     public Text LevelText;
+    public GameObject WinCanvas;
     
     private CircleCollider2D CCollider;
     private ParticleSystem PSystem;
@@ -23,6 +25,7 @@ public class NextLevelAi : MonoBehaviour
     private int RandomLevelNumber;
     
     public GameManager gameManager;
+    
     
     public static float IncreasedTime = 1;
     
@@ -43,24 +46,16 @@ public class NextLevelAi : MonoBehaviour
     public void InfinateGameLoop()
     {
 
-        if (SceneManager.GetActiveScene().buildIndex < 11)
+        if (SceneManager.GetActiveScene().buildIndex != 26)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
-        else if (SceneManager.GetActiveScene().buildIndex >= 11)
-        {
-            RandomLevelNumber = Random.Range(12, 23);
-            SceneManager.LoadScene(RandomLevelNumber);
+            return;
         }
         
-        
-        if (SceneManager.GetActiveScene().buildIndex == 18)
+         if (SceneManager.GetActiveScene().buildIndex == 26)
         {
-            SceneManager.LoadScene(12);
-        }
-        else if (SceneManager.GetActiveScene().buildIndex != 18)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            WinCanvas.SetActive(true);
+            Time.timeScale = 0;
         }
     }
 

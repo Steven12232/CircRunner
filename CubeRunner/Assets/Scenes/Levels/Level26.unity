@@ -46959,7 +46959,7 @@ MonoBehaviour:
   ThrustSpeed: 850
   _BombAi: {fileID: 0}
   _Lava: {fileID: 2125994901}
-  MaxSpeed: 25
+  MaxSpeed: 50
 --- !u!212 &945280140
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -101803,9 +101803,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0000009536743, y: -0.00000047683716}
+  m_Offset: {x: -0.004093048, y: -0.0012194791}
   serializedVersion: 2
-  m_Radius: 0.5000002
+  m_Radius: 0.52563924
 --- !u!212 &1706715715
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -122821,8 +122821,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125994897}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -757.1188, y: -52.920013, z: 0}
-  m_LocalScale: {x: 9780.488, y: 86.62423, z: 1}
+  m_LocalPosition: {x: -757.1188, y: -211.19, z: 0}
+  m_LocalScale: {x: 9780.488, y: 403.1612, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -122840,7 +122840,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.0105}
+  m_Offset: {x: 0, y: -0.004376501}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -122851,7 +122851,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.0492141}
+  m_Size: {x: 1, y: 1.0194609}
   m_EdgeRadius: 0
 --- !u!114 &2125994901
 MonoBehaviour:

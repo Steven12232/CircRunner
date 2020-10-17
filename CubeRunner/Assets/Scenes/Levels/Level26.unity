@@ -2866,6 +2866,7 @@ MonoBehaviour:
   PauseMenuCanvas: {fileID: 1099777482}
   RestartWithAdsText: {fileID: 706474564}
   Rules: {fileID: 1105768747}
+  LooseCanvas: {fileID: 0}
 --- !u!1 &104583625
 GameObject:
   m_ObjectHideFlags: 0
@@ -52914,6 +52915,7 @@ MonoBehaviour:
   PauseMenuCanvas: {fileID: 1099777482}
   RestartWithAdsText: {fileID: 706474564}
   Rules: {fileID: 1105768747}
+  LooseCanvas: {fileID: 2144967039}
 --- !u!1 &979942149
 GameObject:
   m_ObjectHideFlags: 0

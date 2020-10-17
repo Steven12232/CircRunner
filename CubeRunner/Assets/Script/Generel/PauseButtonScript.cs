@@ -11,6 +11,7 @@ public class PauseButtonScript : MonoBehaviour
     public GameObject PauseMenuCanvas;
     public TextMeshProUGUI RestartWithAdsText;
     public GameObject Rules;
+    public GameObject LooseCanvas;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,31 +30,39 @@ public class PauseButtonScript : MonoBehaviour
     {
         if(SceneManager.GetActiveScene().buildIndex == 1) //Checks if the scene is 1
         {
-            switch (PauseMenuCanvas.activeSelf)
+            if (LooseCanvas.activeSelf == false)
             {
-                case true when Rules.activeSelf == false:
-                    PauseMenuCanvas.SetActive(false);
-                    Time.timeScale = 1;
-                    break;
-                case false when Rules.activeSelf == false:
-                    PauseMenuCanvas.SetActive(true);
-                    Time.timeScale = 0;
-                    break;
+                switch (PauseMenuCanvas.activeSelf)
+                {
+                    case true when Rules.activeSelf == false:
+                        PauseMenuCanvas.SetActive(false);
+                        Time.timeScale = 1;
+                        break;
+                    case false when Rules.activeSelf == false:
+                        PauseMenuCanvas.SetActive(true);
+                        Time.timeScale = 0;
+                        break;
+                }
             }
+           
         }
         else if(SceneManager.GetActiveScene().buildIndex != 1) // Checks if the scene is not 1
         {
-            switch (PauseMenuCanvas.activeSelf)
+            if (LooseCanvas.activeSelf == false)
             {
-                case true:
-                    PauseMenuCanvas.SetActive(false);
-                    Time.timeScale = 1;
-                    break;
-                case false:
-                    PauseMenuCanvas.SetActive(true);
-                    Time.timeScale = 0;
-                    break;
+                switch (PauseMenuCanvas.activeSelf)
+                {
+                    case true:
+                        PauseMenuCanvas.SetActive(false);
+                        Time.timeScale = 1;
+                        break;
+                    case false:
+                        PauseMenuCanvas.SetActive(true);
+                        Time.timeScale = 0;
+                        break;
+                }
             }
+            
         }
         
     }

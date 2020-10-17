@@ -2975,6 +2975,7 @@ MonoBehaviour:
   PauseMenuCanvas: {fileID: 1099777482}
   RestartWithAdsText: {fileID: 706474564}
   Rules: {fileID: 0}
+  LooseCanvas: {fileID: 0}
 --- !u!1 &104583625
 GameObject:
   m_ObjectHideFlags: 0
@@ -77486,7 +77487,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PauseMenuCanvas: {fileID: 1099777482}
   RestartWithAdsText: {fileID: 706474564}
-  Rules: {fileID: 0}
+  Rules: {fileID: 1824925643}
+  LooseCanvas: {fileID: 2144967039}
 --- !u!1 &979942149
 GameObject:
   m_ObjectHideFlags: 0
@@ -101776,6 +101778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AppStore_ID: 3788744
+  gameManager: {fileID: 0}
   Player: {fileID: 945280137}
 --- !u!1 &1338882642
 GameObject:
@@ -106639,9 +106642,12 @@ MonoBehaviour:
   Player: {fileID: 945280137}
   nextLevelAi: {fileID: 1706715711}
   RulesText: {fileID: 1824925643}
+  RulesTextForLevel11: {fileID: 0}
   ContinueButton: {fileID: 117295498}
   _livesRef: {fileID: 1948775464}
   LoseCanvas: {fileID: 2144967039}
+  BounceObjectsToDectavateForLevel11: {fileID: 0}
+  ContinueButtonForLevel11: {fileID: 0}
 --- !u!4 &1517094522
 Transform:
   m_ObjectHideFlags: 0
@@ -122007,6 +122013,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
   LevelText: {fileID: 1691141991}
+  WinCanvas: {fileID: 0}
+  gameManager: {fileID: 0}
   playerScript: {fileID: 945280139}
   NewMaxPLayerSpeed: 0
 --- !u!58 &1706715714

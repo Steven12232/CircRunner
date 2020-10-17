@@ -2960,6 +2960,7 @@ MonoBehaviour:
   PauseMenuCanvas: {fileID: 1099777482}
   RestartWithAdsText: {fileID: 706474564}
   Rules: {fileID: 1105768747}
+  LooseCanvas: {fileID: 0}
 --- !u!1 &104583625
 GameObject:
   m_ObjectHideFlags: 0
@@ -56568,6 +56569,7 @@ MonoBehaviour:
   PauseMenuCanvas: {fileID: 1099777482}
   RestartWithAdsText: {fileID: 706474564}
   Rules: {fileID: 1105768747}
+  LooseCanvas: {fileID: 2144967039}
 --- !u!1 &979942149
 GameObject:
   m_ObjectHideFlags: 0
@@ -91021,6 +91023,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Player: {fileID: 945280137}
   LevelText: {fileID: 494986846}
+  WinCanvas: {fileID: 0}
   gameManager: {fileID: 1517094521}
   playerScript: {fileID: 945280139}
   NewMaxPLayerSpeed: 0

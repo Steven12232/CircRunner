@@ -164,7 +164,6 @@ public class GameManager : MonoBehaviour
         if (!_livesRef.Heart3.activeSelf)
         {
            LoseCanvas.SetActive(true);
-           Time.timeScale = 0.0f;
            Player.SetActive(false);
         }
         

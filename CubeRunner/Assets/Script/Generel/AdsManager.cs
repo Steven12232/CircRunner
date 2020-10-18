@@ -40,7 +40,7 @@ public class AdsManager : MonoBehaviour,IUnityAdsListener
         if (showResult == ShowResult.Finished)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            
+
             Player.SetActive(true);
 
             NextLevelAi.DidMaxSpeedIncreaseHappen = false;
@@ -49,7 +49,11 @@ public class AdsManager : MonoBehaviour,IUnityAdsListener
 
             Time.timeScale = 1f;
             
-            gameManager.ContinueButtonForLevel11.SetActive(false);
+            
+            
+            
+                gameManager.ContinueButtonForLevel11.SetActive(false);
+            
 
 
         } else if (showResult == ShowResult.Skipped) {
@@ -58,26 +62,40 @@ public class AdsManager : MonoBehaviour,IUnityAdsListener
             
             Player.SetActive(true);
             
+         
+
             NextLevelAi.DidMaxSpeedIncreaseHappen = false;
 
             NextLevelAi.IncreasedTime = 1f;
 
             Time.timeScale = 1f;
             
-            gameManager.ContinueButtonForLevel11.SetActive(false);
+            
+            
+            
+                gameManager.ContinueButtonForLevel11.SetActive(false);
+            
+          
 
         } else if (showResult == ShowResult.Failed) {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             
             NextLevelAi.IncreasedTime = 1f;
             
+        
             NextLevelAi.DidMaxSpeedIncreaseHappen = false;
 
             Player.SetActive(true);
             
             Time.timeScale = 1f;
             
-            gameManager.ContinueButtonForLevel11.SetActive(false);
+            
+            
+            
+                gameManager.ContinueButtonForLevel11.SetActive(false);
+            
+            
+          
 
         }
     }

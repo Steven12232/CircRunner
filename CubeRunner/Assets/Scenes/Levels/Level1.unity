@@ -3616,7 +3616,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -14, y: -297}
+  m_AnchoredPosition: {x: -14, y: -446}
   m_SizeDelta: {x: 175.79083, y: 50.770996}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &117295500
@@ -6971,7 +6971,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 3.3, y: -4.3}
+  m_AnchoredPosition: {x: 1.3, y: -1}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &231706333
@@ -6995,8 +6995,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Continue '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ff7feaa40be4b4546a50a91790616274, type: 2}
-  m_sharedMaterial: {fileID: 3714709317064166630, guid: ff7feaa40be4b4546a50a91790616274,
+  m_fontAsset: {fileID: 11400000, guid: ca3fc9f1ea1f84c4b82553819dfaa128, type: 2}
+  m_sharedMaterial: {fileID: -5826065832580308208, guid: ca3fc9f1ea1f84c4b82553819dfaa128,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -24044,7 +24044,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: baefb22d21f632440ab3a2b152df0526, type: 3}
+    m_Font: {fileID: 12800000, guid: c4b92cdef972ae3409b1d1d546579cb6, type: 3}
     m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
@@ -24056,7 +24056,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: a
+  m_Text: 
 --- !u!222 &494986847
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45160,8 +45160,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.2, y: 18.9}
-  m_SizeDelta: {x: 704.8999, y: 544.45325}
+  m_AnchoredPosition: {x: -3.2, y: -159.2}
+  m_SizeDelta: {x: 704.8999, y: 896.20447}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1105768749
 MonoBehaviour:
@@ -45183,8 +45183,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: baefb22d21f632440ab3a2b152df0526, type: 3}
-    m_FontSize: 50
+    m_Font: {fileID: 12800000, guid: c4b92cdef972ae3409b1d1d546579cb6, type: 3}
+    m_FontSize: 45
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -45195,10 +45195,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Welcome to Circ Runner\r\n\nThe rules are simple:\r\n Tilt your device
+  m_Text: "Welcome to CirC Runner\r\n\nThe rules are simple:\r\n Tilt your device
     to move the player circle. The objective of the game is to bounce on the white
     circles and avoid the red ones. If you hit the red circle or the lava at the
-    bottom, one of your 3 lives will be removed. When completed a blue circle will
+    bottom, one of your 3 lives will be removed. When completed a green circle will
     appear and once bounced on, will bring you to the next level.\r\n"
 --- !u!222 &1105768750
 CanvasRenderer:
@@ -45752,8 +45752,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Pause
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ff7feaa40be4b4546a50a91790616274, type: 2}
-  m_sharedMaterial: {fileID: 3714709317064166630, guid: ff7feaa40be4b4546a50a91790616274,
+  m_fontAsset: {fileID: 11400000, guid: ca3fc9f1ea1f84c4b82553819dfaa128, type: 2}
+  m_sharedMaterial: {fileID: -5826065832580308208, guid: ca3fc9f1ea1f84c4b82553819dfaa128,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -51145,7 +51145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AppStore_ID: 3788744
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1517094521}
   Player: {fileID: 945280137}
 --- !u!1 &1338882642
 GameObject:
@@ -55724,7 +55724,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1517094522}
   - component: {fileID: 1517094521}
-  - component: {fileID: 1517094523}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -55753,6 +55752,7 @@ MonoBehaviour:
   LoseCanvas: {fileID: 2144967039}
   BounceObjectsToDectavateForLevel11: {fileID: 0}
   ContinueButtonForLevel11: {fileID: 0}
+  GameObjectsToDeactivateForLevel1: {fileID: 1021444613}
 --- !u!4 &1517094522
 Transform:
   m_ObjectHideFlags: 0
@@ -55767,18 +55767,6 @@ Transform:
   m_Father: {fileID: 338922860}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1517094523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1517094520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dec582124b7942b4896fa658ada43cbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1518649964
 GameObject:
   m_ObjectHideFlags: 0
@@ -65894,6 +65882,32 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   playerScript: {fileID: 945280139}
   NewMaxPLayerSpeed: 0
+  Level_1: {fileID: 0}
+  Level_2: {fileID: 0}
+  Level_3: {fileID: 0}
+  Level_4: {fileID: 0}
+  Level_5: {fileID: 0}
+  Level_6: {fileID: 0}
+  Level_7: {fileID: 0}
+  Level_8: {fileID: 0}
+  Level_9: {fileID: 0}
+  Level_10: {fileID: 0}
+  Level_11: {fileID: 0}
+  Level_12: {fileID: 0}
+  Level_13: {fileID: 0}
+  Level_14: {fileID: 0}
+  Level_15: {fileID: 0}
+  Level_16: {fileID: 0}
+  Level_17: {fileID: 0}
+  Level_18: {fileID: 0}
+  Level_19: {fileID: 0}
+  Level_20: {fileID: 0}
+  Level_21: {fileID: 0}
+  Level_22: {fileID: 0}
+  Level_23: {fileID: 0}
+  Level_24: {fileID: 0}
+  Level_25: {fileID: 0}
+  Level_26: {fileID: 0}
 --- !u!58 &1706715714
 CircleCollider2D:
   m_ObjectHideFlags: 0

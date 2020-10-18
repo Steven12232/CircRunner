@@ -13,7 +13,6 @@ public class NextLevelAi : MonoBehaviour
 {
     public GameObject Player;
     
-    public static int  LevelNumber = 1;
     public Text LevelText;
     public GameObject WinCanvas;
     
@@ -34,6 +33,36 @@ public class NextLevelAi : MonoBehaviour
 
     public float NewMaxPLayerSpeed;
     public static bool DidMaxSpeedIncreaseHappen = false;
+    
+    //References to levels in level select
+
+    public GameObject Level_1;
+    public GameObject Level_2;
+    public GameObject Level_3;
+    public GameObject Level_4;
+    public GameObject Level_5;
+    public GameObject Level_6;
+    public GameObject Level_7;
+    public GameObject Level_8;
+    public GameObject Level_9;
+    public GameObject Level_10;
+    public GameObject Level_11;
+    public GameObject Level_12;
+    public GameObject Level_13;
+    public GameObject Level_14;
+    public GameObject Level_15;
+    public GameObject Level_16;
+    public GameObject Level_17;
+    public GameObject Level_18;
+    public GameObject Level_19;
+    public GameObject Level_20;
+    public GameObject Level_21;
+    public GameObject Level_22;
+    public GameObject Level_23;
+    public GameObject Level_24;
+    public GameObject Level_25;
+    public GameObject Level_26;
+
     private void Awake()
     {
         PSystem = GetComponentInParent<ParticleSystem>();
@@ -79,7 +108,6 @@ public class NextLevelAi : MonoBehaviour
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             IncreasedTime = 1;
-            LevelNumber = 1;
         }
     }
 
@@ -123,8 +151,6 @@ public class NextLevelAi : MonoBehaviour
         if (!Player) { return; }
         
         Time.timeScale = TimeIncreaseValue();
-        
-        LevelNumber++;
         
         AddBounceToPlayer();
         
@@ -189,6 +215,6 @@ public class NextLevelAi : MonoBehaviour
      { 
          NumberOfAiLeft = GameObject.FindGameObjectsWithTag("AI");
          CheckForNoAiLeft();
-         LevelText.text = "Level:" + LevelNumber;
-    }
+         LevelText.text = "Level: " + SceneManager.GetActiveScene().buildIndex.ToString() ;
+     }
 }

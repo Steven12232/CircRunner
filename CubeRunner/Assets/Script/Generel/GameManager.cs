@@ -16,9 +16,8 @@ public class GameManager : MonoBehaviour
     public GameObject LoseCanvas;
     public GameObject BounceObjectsToDectavateForLevel11;
     public GameObject ContinueButtonForLevel11;
+    public GameObject GameObjectsToDeactivateForLevel1;
 
-  
-    
     private static bool DidInvokeForRulesHappen;
     private static bool DidInvokeHappenForPlayerSpawn;
     private static bool DidPlayerPressContinue;
@@ -31,7 +30,7 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        
+
     }
     
     
@@ -40,7 +39,13 @@ public class GameManager : MonoBehaviour
         DidPlayerPressContinue = true;
         InvokeSetPlayerAfterDelay();
         Time.timeScale = 1.0f;
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            GameObjectsToDeactivateForLevel1.SetActive(true);
+        }
         Destroy(ContinueButton, 0.1f);
+        
+        
     }
 
     public void ContinueButtonFunctionForLevel11()
@@ -149,7 +154,7 @@ public class GameManager : MonoBehaviour
 
         if (SceneManager.GetActiveScene().buildIndex == 11)
         {
-            if (DidPlayerPressContinueFoeLevel11 == true)
+            if (DidPlayerPressContinueFoeLevel11)
             {
                 Time.timeScale = NextLevelAi.IncreasedTime;
                 BounceObjectsToDectavateForLevel11.SetActive(true);
@@ -157,6 +162,18 @@ public class GameManager : MonoBehaviour
             else
             {
                 BounceObjectsToDectavateForLevel11.SetActive(false);
+            }
+        }
+
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            if (DidPlayerPressContinue)
+            {
+                GameObjectsToDeactivateForLevel1.SetActive(true);
+            }
+            else
+            {
+                GameObjectsToDeactivateForLevel1.SetActive(false); 
             }
         }
         

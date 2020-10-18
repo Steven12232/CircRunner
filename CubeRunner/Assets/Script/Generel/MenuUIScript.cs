@@ -16,7 +16,6 @@ public class MenuUIScript : MonoBehaviour
     public void PlayButtonStart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        NextLevelAi.LevelNumber = 1;
         Time.timeScale = 1f;
     }
 
@@ -28,6 +27,17 @@ public class MenuUIScript : MonoBehaviour
     public void LoadMainMenu()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void BackToMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
+
+
+    public void LevelSelect()
+    {
+        SceneManager.LoadScene(27);
     }
 
     // Update is called once per frame

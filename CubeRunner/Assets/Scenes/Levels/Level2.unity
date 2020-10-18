@@ -12143,8 +12143,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Continue '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ff7feaa40be4b4546a50a91790616274, type: 2}
-  m_sharedMaterial: {fileID: 3714709317064166630, guid: ff7feaa40be4b4546a50a91790616274,
+  m_fontAsset: {fileID: 11400000, guid: ca3fc9f1ea1f84c4b82553819dfaa128, type: 2}
+  m_sharedMaterial: {fileID: -5826065832580308208, guid: ca3fc9f1ea1f84c4b82553819dfaa128,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -38710,7 +38710,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: baefb22d21f632440ab3a2b152df0526, type: 3}
+    m_Font: {fileID: 12800000, guid: c4b92cdef972ae3409b1d1d546579cb6, type: 3}
     m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
@@ -60531,8 +60531,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Pause
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: ff7feaa40be4b4546a50a91790616274, type: 2}
-  m_sharedMaterial: {fileID: 3714709317064166630, guid: ff7feaa40be4b4546a50a91790616274,
+  m_fontAsset: {fileID: 11400000, guid: ca3fc9f1ea1f84c4b82553819dfaa128, type: 2}
+  m_sharedMaterial: {fileID: -5826065832580308208, guid: ca3fc9f1ea1f84c4b82553819dfaa128,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -70535,6 +70535,7 @@ MonoBehaviour:
   LoseCanvas: {fileID: 2144967039}
   BounceObjectsToDectavateForLevel11: {fileID: 0}
   ContinueButtonForLevel11: {fileID: 0}
+  GameObjectsToDeactivateForLevel1: {fileID: 0}
 --- !u!4 &1517094522
 Transform:
   m_ObjectHideFlags: 0
@@ -80676,6 +80677,32 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   playerScript: {fileID: 945280139}
   NewMaxPLayerSpeed: 0
+  Level_1: {fileID: 0}
+  Level_2: {fileID: 0}
+  Level_3: {fileID: 0}
+  Level_4: {fileID: 0}
+  Level_5: {fileID: 0}
+  Level_6: {fileID: 0}
+  Level_7: {fileID: 0}
+  Level_8: {fileID: 0}
+  Level_9: {fileID: 0}
+  Level_10: {fileID: 0}
+  Level_11: {fileID: 0}
+  Level_12: {fileID: 0}
+  Level_13: {fileID: 0}
+  Level_14: {fileID: 0}
+  Level_15: {fileID: 0}
+  Level_16: {fileID: 0}
+  Level_17: {fileID: 0}
+  Level_18: {fileID: 0}
+  Level_19: {fileID: 0}
+  Level_20: {fileID: 0}
+  Level_21: {fileID: 0}
+  Level_22: {fileID: 0}
+  Level_23: {fileID: 0}
+  Level_24: {fileID: 0}
+  Level_25: {fileID: 0}
+  Level_26: {fileID: 0}
 --- !u!58 &1706715714
 CircleCollider2D:
   m_ObjectHideFlags: 0

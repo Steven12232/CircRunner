@@ -70930,7 +70930,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Now that you understand the basic machanichs of the game, there will be
+  m_Text: Now that you understand the basic mechanics of the game, there will be
     a new object, an oval. The oval will bounce you up to where you have to go.
 --- !u!222 &1111996314
 CanvasRenderer:
@@ -96324,6 +96324,7 @@ MonoBehaviour:
   LoseCanvas: {fileID: 2144967039}
   BounceObjectsToDectavateForLevel11: {fileID: 1021444613}
   ContinueButtonForLevel11: {fileID: 365506638}
+  GameObjectsToDeactivateForLevel1: {fileID: 0}
 --- !u!4 &1517094522
 Transform:
   m_ObjectHideFlags: 0

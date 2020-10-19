@@ -147,6 +147,118 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void CompleteLevel()
+    {
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 1);
+
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 2);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 3);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 4)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 4);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 5)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 5);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 6)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 6);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 7)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 7);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 8)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 8);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 9)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 9);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 10)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 10);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 11)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 11);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 12)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 12);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 13)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 13);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 14)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 14);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 15)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 15);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 16)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 16);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 17)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 17);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 18)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 18);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 19)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 19);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 20)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 20);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 21)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 21);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 22)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 22);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 23)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 23);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 24)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 24);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 25)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 25);
+        }
+        else if (SceneManager.GetActiveScene().buildIndex == 26)
+        {
+            PlayerPrefs.SetInt("HighestLevel", 26);
+        }
+    }
+    
+    
+    
+    
     // Update is called once per frame
      void Update()
      
@@ -176,6 +288,10 @@ public class GameManager : MonoBehaviour
                 GameObjectsToDeactivateForLevel1.SetActive(false); 
             }
         }
+        
+        
+        
+        
         
         
         if (!_livesRef.Heart3.activeSelf)

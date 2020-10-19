@@ -65,8 +65,7 @@ public class PauseButtonScript : MonoBehaviour
         }
         
     }
-
-
+    
     void SetRestartTextLevel()
     {
         RestartWithAdsText.text = "Restart On Level:" + SceneManager.GetActiveScene().buildIndex.ToString();
@@ -77,4 +76,15 @@ public class PauseButtonScript : MonoBehaviour
     {
         SetRestartTextLevel();
     }
+
+
+
+
+
+     public void LoadLevel1()
+     {
+         SceneManager.LoadScene(1);
+     }
+     
+     
 }

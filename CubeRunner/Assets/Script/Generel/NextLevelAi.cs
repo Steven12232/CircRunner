@@ -35,18 +35,9 @@ public class NextLevelAi : MonoBehaviour
     public float NewMaxPLayerSpeed;
     public static bool DidMaxSpeedIncreaseHappen = false;
     
-    //References to levels in level select
+    //References to levels in level set
 
-  
-    
 
-  
-
-   
-    
-    
-
-    
     private void Awake()
     {
         PSystem = GetComponentInParent<ParticleSystem>();

@@ -25,7 +25,7 @@ public class PlayerPrefsRefrences : MonoBehaviour
         for (int i = 0; i < LevelButtons.Length; i++)
         {
 
-            if (i + 1 > HighestLevel)
+            if (i > HighestLevel)
             {
                 LevelButtons[i].interactable = false;
                 QuestionMark[i].SetActive(true);

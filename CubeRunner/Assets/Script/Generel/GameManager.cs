@@ -24,7 +24,10 @@ public class GameManager : MonoBehaviour
     
     private static bool DidInvokeForRulesHappenForLevel11;
     private static bool DidInvokeHappenForPlayerSpawnForLevel11;
-    private static bool DidPlayerPressContinueFoeLevel11;
+
+    private bool DidTimeChangeAfterPlayerPressedContinueOnLevel11;
+    
+    public  static bool DidPlayerPressContinueFoeLevel11;
 
 
 
@@ -78,7 +81,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-
+        DidTimeChangeAfterPlayerPressedContinueOnLevel11 = false;
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             Player.SetActive(false);
@@ -255,8 +258,18 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("HighestLevel", 26);
         }
     }
-    
-    
+
+
+
+    void ChangeTimeLevel11()
+    {
+        if (DidTimeChangeAfterPlayerPressedContinueOnLevel11 == false)
+        {
+            Time.timeScale = NextLevelAi.IncreasedTime;
+            DidTimeChangeAfterPlayerPressedContinueOnLevel11 = true;
+        }
+    }
+   
     
     
     // Update is called once per frame
@@ -268,7 +281,7 @@ public class GameManager : MonoBehaviour
         {
             if (DidPlayerPressContinueFoeLevel11)
             {
-                Time.timeScale = NextLevelAi.IncreasedTime;
+                ChangeTimeLevel11();
                 BounceObjectsToDectavateForLevel11.SetActive(true);
             }
             else
@@ -277,6 +290,11 @@ public class GameManager : MonoBehaviour
             }
         }
 
+
+      
+        
+        
+        
         if (SceneManager.GetActiveScene().buildIndex == 1)
         {
             if (DidPlayerPressContinue)

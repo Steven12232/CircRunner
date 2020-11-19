@@ -47,6 +47,7 @@ public class PlayerScript : MonoBehaviour
     {
         dirX = Input.acceleration.x * moveSpeed;
 
+        
         if (SceneManager.GetActiveScene().buildIndex <= 3)
         {
             moveSpeed = 50.0f;
